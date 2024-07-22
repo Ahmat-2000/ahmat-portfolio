@@ -4,52 +4,28 @@
 
 :root{
   font-size: 16px;
-  --link-border-size: 27;
-  --text-color: #fff;
   --text-color-blue : #38b6ff;
-  --green-text: #00bf63;
-  --gray-text : #d9d9d9;
-  --border-color : #545454;
-  --border-color-nav : #382166;
   --active-link-color: #00d1ff;
   --check-marc-color : #7f9db2;
-  --bg-color-menu-mobile: rgba(255,255,255,0.3);
+  --bg-color-menu-mobile: rgba(27, 46, 55, 0.9);
   --dark-color : #212428;
-  --black-shadow-color : rgba(0, 0, 0, 0.2);
-  --white-shadow-color : rgba(255, 255, 255, 0.1);
-  --menu-box-shadow : rgba(0, 0, 0, 0.3);
-  --card-box-shadow : var(--black-shadow-color) 0px 0px 10px, var(--white-shadow-color) 0px 0px 10px -1px;
+  --menu-box-shadow : #3a2e55;
 }
-
 *{
+  /* border: #d9d9d9 1px solid; */
   padding: 0;
   margin: 0;
   text-decoration: none;
   box-sizing: border-box;
   list-style-type: none;
-  color: var(--text-color);
+  color: #d4d4d4;
   font-family: fantasy Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--dark-color) ;
-  min-width: 390px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-section , header{
-  padding: 110px 50px 0px 50px;
-}
 
 @layer utilities {
   .text-balance {

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Resume() {
     return (
-        <section className="min-h-screen min-w-full" id="resume">
+        <section className="container flex flex-col mx-auto scroll-mt-32 p-4 mt-20" id="resume">
             <h1>Resume</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deleniti?

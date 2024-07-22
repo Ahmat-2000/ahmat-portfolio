@@ -2,7 +2,7 @@ import React from 'react'
 
 function Pricing() {
     return (
-        <section className="min-h-screen min-w-full"  id="pricing">
+        <section className="container flex flex-col mx-auto scroll-mt-32 p-4 mt-20" id="pricing">
             <h1>Pricing</h1>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptatibus.
