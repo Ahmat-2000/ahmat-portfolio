@@ -9,8 +9,8 @@ import myImage from '@/images/moi.png';
 function Header() {
   return (
     <header className="flex flex-col gap-4 scroll-mt-24 md:gap-10 px-4 md:px-2 md:py-24 md:flex-row lg:justify-center lg:items-center" id="home">
-      <Image className="md:hidden sm:rounded-full mx-auto w-[330px]" src={myImage}  alt="Ahmat picture" />
-      <div className="mx-auto flex flex-col gap-4 md:w-1/2 md:gap-16 md:mb-5 md:ml-0 sm:w-4/5 sm:ml-10" >
+      <Image className="md:hidden rounded-full ml-auto w-[330px]" src={myImage}  alt="Ahmat picture" />
+      <div className="flex flex-col gap-4 md:w-1/2 md:gap-16 md:mb-5 md:ml-0 sm:w-4/5" >
       {/* start of heading */}
         <h1 className="font-bold text-neutral-300 text-4xl md:text-4xl lg:text-6xl ">Hello,<br className="mb-1 "/> This is
           <span className="text-green-600 "> Ahmat</span>
