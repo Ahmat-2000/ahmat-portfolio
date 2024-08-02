@@ -19,7 +19,7 @@ function NavBar() {
     };
     return (
     <nav className="border-b mb-4 border-blue-900/95 shadow-sm shadow-blue-900 rounded-lg p-2 sticky flex items-center justify-between top-0 container mx-auto bg-inherit max-w-[1280px] xl:mx-auto">
-        <div className="flex items-center gap-1 py-1 hover:opacity-75">
+        <div className="flex items-center gap-1 py-1 transition-opacity duration-1000  hover:opacity-75">
             <Link href="">
                 <Image className="rounded-3xl" width={40} src={logo} alt="logo" />
             </Link>
@@ -28,10 +28,10 @@ function NavBar() {
             </Link>
         </div>
 
-        <ul className={`${!isOpenMenu ? "hidden" : "flex"} flex-col justify-around items-center absolute top-0 py-8 right-0 min-h-96 bg-slate-950/95 rounded-2xl w-2/4
+        <ul className={`${!isOpenMenu ? "hidden" : "flex"} flex-col justify-around items-center absolute top-0 py-8 right-0 min-h-[420px] bg-gray-600 rounded-2xl w-full sm:w-[70%]
         md:flex md:flex-row md:justify-evenly md:p-3 md:bg-inherit md:min-h-max md:w-2/3`}>
         {   links.map((item, index) =>
-                (<li key={index} className={`${activeLink === item.url && "text-sky-400/95"}  w-2/4 py-1 text-center rounded-xl outline text-xl md:text-lg md:outline-none md:rounded-none`}>
+                (<li key={index} className={`${activeLink === item.url && "text-sky-400/95"}  w-1/2 py-1 text-center rounded-xl outline text-xl md:text-lg md:outline-none md:rounded-none`}>
                     <Link
                         onClick={() => hideMenu(item.url)}
                         className="block md:inline hover:opacity-75"
@@ -41,7 +41,7 @@ function NavBar() {
                 </li>))
         }
         </ul>
-        <div className="md:hidden absolute top-1 right-1">
+        <div className="md:hidden transition-opacity duration-1000 hover:opacity-55 absolute top-1 right-1">
             <Hamburger toggled={isOpenMenu} toggle={setIsOpenMenu} />
         </div>
 

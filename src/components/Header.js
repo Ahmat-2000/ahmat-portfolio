@@ -1,26 +1,33 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTypewriter , Cursor} from 'react-simple-typewriter';
 import { IoMdContact, IoMdDownload } from "react-icons/io";
 
 import linkedIn from '@/images/linked.png';
 import github from '@/images/github.png';
 import myImage from '@/images/moi.png';
+import { wordToType } from '@/lib/utils';
 
 function Header() {
+  const [text] = useTypewriter({
+    words: wordToType,
+    loop: 0
+  })
+
   return (
     <header className="flex flex-col gap-4 scroll-mt-24 md:gap-10 px-4 md:px-2 md:py-24 md:flex-row lg:justify-center lg:items-center" id="home">
-      <Image className="md:hidden rounded-full ml-auto w-[330px]" src={myImage}  alt="Ahmat picture" />
+      <Image className="hover:scale-x-75 hover:opacity-55 transition-all duration-500 md:hidden rounded-full ml-auto w-[330px]" src={myImage}  alt="Ahmat picture" />
       <div className="flex flex-col gap-4 md:w-1/2 md:gap-16 md:mb-5 md:ml-0 sm:w-4/5" >
       {/* start of heading */}
         <h1 className="font-bold text-neutral-300 text-4xl md:text-4xl lg:text-6xl ">Hello,<br className="mb-1 "/> This is
           <span className="text-green-600 "> Ahmat</span>
           <br className="sm:mb-2"/>
-          <span className="text-2xl sm:text-3xl block lg:ml-2 ">
+          <span className="text-3xl block lg:ml-2 ">
             <span> I’m a </span>
             <span className="lg:text-4xl">
-              <b className="text-pink-500 hidden">Developer</b>
-              <b className="text-pink-500 hidden">Pentester</b>
-              <b className="text-pink-600">Freelancer</b>.
+              <b className="text-pink-600">{text}</b>
             </span>
           </span>
         </h1>

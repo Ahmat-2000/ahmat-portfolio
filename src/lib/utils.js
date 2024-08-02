@@ -1,3 +1,5 @@
+
+// nav link
 export const links = [
     {
         url: "#home",
@@ -20,3 +22,6 @@ export const links = [
         text: "Contact"
     },
 ];
+
+// text to write in the hero section
+export const wordToType = ['Freelancer', 'Developer', 'Pentester'];
