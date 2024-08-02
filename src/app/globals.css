@@ -4,15 +4,9 @@
 
 :root{
   font-size: 16px;
-  --text-color-blue : #38b6ff;
-  --active-link-color: #00d1ff;
-  --check-marc-color : #7f9db2;
-  --bg-color-menu-mobile: rgba(27, 46, 55, 0.9);
   --dark-color : #212428;
-  --menu-box-shadow : #3a2e55;
 }
 *{
-  /* border: #d9d9d9 1px solid; */
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -31,4 +25,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@media (min-width: 768px) {
+
 }

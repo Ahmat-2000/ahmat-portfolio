@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body className={`antialiased ${inter.className}`}>
       <NavBar />
-      <main className="font-mono">
+      <main className="container max-w-[1280px] xl:mx-auto  font-mono ">
         {children}
       </main>
       </body>
