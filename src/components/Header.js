@@ -38,11 +38,11 @@ function Header() {
         <SocialMediaLink />
         {/* end of social media  */}
         <div className="flex flex-col gap-5 sm:flex-row ">
-          <HeroBtn text="CONTACT ME">
+          <HeroBtn url="#contact" text="CONTACT ME">
             <IoMdContact size={20}/>
           </HeroBtn>
-          <HeroBtn text="DOWNLOAD RESUME">
-            <IoMdDownload size={20}/>
+          <HeroBtn url="/api/download-resume" text="DOWNLOAD RESUME">
+            <IoMdDownload className="" size={20}/>
           </HeroBtn>
         </div>
       </div>
