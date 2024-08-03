@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { Inter , Roboto} from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight:['400','700','900'] });
 
 export const metadata = {
   title: "Ahmat's portfolio",
