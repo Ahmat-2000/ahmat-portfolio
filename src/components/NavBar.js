@@ -23,14 +23,14 @@ function NavBar() {
                 <Image className="rounded-3xl" width={40} src={userData.image} alt="logo" />
             </Link>
             <Link href="">
-                <span className=" antialiased font-semibold text-neutral-300 text-2xl">{userData.name}</span>
+                <span className=" antialiased font-bold text-neutral-300 text-2xl">{userData.name}</span>
             </Link>
         </div>
 
         <ul className={`${!isOpenMenu ? "hidden" : "flex"} flex-col justify-around items-center absolute top-0 py-8 right-0 min-h-[420px] bg-gray-600 rounded-2xl w-full sm:w-[70%]
         md:flex md:flex-row md:justify-evenly md:p-3 md:bg-inherit md:min-h-max md:w-2/3`}>
         {   links.map((item, index) =>
-                (<li key={index} className={`${activeLink === item.url && "text-sky-400/95"}  w-1/2 py-1 text-center shadow-2xl shadow-black rounded-xl outline outline-gray-800 text-xl md:shadow-none md:text-lg md:outline-none md:rounded-none`}>
+                (<li key={index} className={`${activeLink === item.url && "title-blue"} font-bold w-1/2 py-1 text-center shadow-2xl shadow-black rounded-xl outline outline-gray-800 text-xl md:shadow-none md:text-lg md:outline-none md:rounded-none`}>
                     <Link
                         onClick={() => hideMenu(item.url)}
                         className="block md:inline hover:opacity-55"
