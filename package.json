@@ -11,8 +11,10 @@
   "dependencies": {
     "hamburger-react": "^2.5.1",
     "next": "14.2.5",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.2",
     "react-icons": "^5.2.1",
     "react-simple-typewriter": "^5.0.1"
   },
