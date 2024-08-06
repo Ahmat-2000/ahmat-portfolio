@@ -13,6 +13,6 @@ export async function POST(request) {
     return NextResponse.json({message : "Your mail has been sent successfully"},{status: 200});
   } catch (err) {
     console.log(err);
-    return NextResponse.json({ message: err.message}, { status: 500 });
+    return NextResponse.json({ message: "There was an issue sending your message. Please try again."}, { status: 500 });
   }
 }
