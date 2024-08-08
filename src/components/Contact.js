@@ -1,6 +1,6 @@
 'use client'
 import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -12,15 +12,18 @@ import SocialMediaLinks from "./ui/SocialMediaLink";
 import { postApiCall } from "@/lib/apiCallFonctions";
 import LoadingSpin from "./ui/LoadingSpin";
 import InputUI from "./ui/InputUI";
-
+import ReCAPTCHA from "react-google-recaptcha";
+import LoadingCaptcha from "./ui/LoadingCaptcha";
 
 function Contact() {
   const [feedback,setFeedback] = useState({});
+  const recaptchaRef = useRef();
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm();
   // useEffect for resetting feedback after 5 seconds
   useEffect(() => {
     if (feedback.status === 200) {
-      reset()
+      reset();
+      recaptchaRef.current.reset();
     }
     if (feedback.message) {
       const timer = setTimeout(() => {
@@ -31,11 +34,11 @@ function Contact() {
     }
   }, [feedback,reset]);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data) => {    
     // api call
-    const response = await postApiCall("/api/sendMail",data);
+    const response = await postApiCall("/api/sendMail",{...data, captchaToken: recaptchaRef.current.getValue()});
     const { message } = await response.json();
-    setFeedback({status: response.status, message: message});   
+    setFeedback({status: response.status, message: message});
   };
 
   return (
@@ -47,13 +50,11 @@ function Contact() {
       <div className="md:flex md:gap-10 md:justify-between gap-5 grid">
         <form className="grid gap-5 shadow-md shadow-gray-500 p-2 md:w-full max-w-2xl" onSubmit={handleSubmit(onSubmit)}>
 
-          {feedback && feedback?.status > 200 &&
-          <div className="shadow-md animate-pulse shadow-red-900 text-red-700 px-4 py-3 rounded " role="alert">
+          {feedback && feedback?.status > 200 && <div className="shadow-md animate-pulse shadow-red-900 text-red-700 px-4 py-3 rounded " role="alert">
             <strong className="font-bold text-inherit">{feedback?.message}</strong>
           </div>}
 
-          {feedback && feedback?.status === 200 &&
-          <div className="shadow-md animate-pulse shadow-green-900 text-green-700 px-4 py-3 rounded" role="alert">
+          {feedback && feedback?.status === 200 && <div className="shadow-md animate-pulse shadow-green-900 text-green-700 px-4 py-3 rounded" role="alert">
             <strong className="font-bold text-inherit">{feedback?.message}</strong>
           </div>}
 
@@ -79,10 +80,17 @@ function Contact() {
                   value: 10,
                   message: "Message must be at least 10 characters."
               }})}
-              className="w-full bg-inherit rounded-lg border-stone-600/100 border p-4shadow-sm shadow-stone-600/90 hover:shadow-stone-400/100 transition-shadow duration-500 focus:outline-none focus:shadow-stone-400/100 min-h-[200px] p-3"
+              className="w-full bg-inherit rounded-lg border-stone-600/100 border shadow-sm shadow-stone-600/90 hover:shadow-stone-400/100 transition-shadow duration-500 focus:outline-none focus:shadow-stone-400/100 min-h-[200px] p-4"
             />
             {errors.message && <span className="text-red-500 font-semibold px-2">{errors.message?.message}</span>}
           </div>
+          <Suspense fallback={<p>loading....</p>}>
+            <ReCAPTCHA 
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              // onChange={handleCaptcha}
+            />
+          </Suspense>
           <button
             disabled={isSubmitting} 
             type="submit"
@@ -91,6 +99,7 @@ function Contact() {
             {isSubmitting ? (<LoadingSpin text="Sending..."/>) :
             "Send me your message" }
           </button>
+          
         </form>
         <div className="">
           <address className="grid gap-3 my-5 text-bold not-italic md:text-xl sm:text-lg">
