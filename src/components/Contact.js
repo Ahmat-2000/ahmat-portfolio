@@ -17,6 +17,8 @@ import LoadingCaptcha from "./ui/LoadingCaptcha";
 
 function Contact() {
   const [feedback,setFeedback] = useState({});
+  const [isLoadingCaptcha, setIsLoadingCaptcha] = useState(true)
+  const [captchaValue, setCaptchaValue] = useState(null)
   const recaptchaRef = useRef();
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm();
   // useEffect for resetting feedback after 5 seconds
@@ -84,20 +86,22 @@ function Contact() {
             />
             {errors.message && <span className="text-red-500 font-semibold px-2">{errors.message?.message}</span>}
           </div>
-          <Suspense fallback={<p>loading....</p>}>
+          
+          {isLoadingCaptcha && <LoadingCaptcha /> }
             <ReCAPTCHA 
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              // onChange={handleCaptcha}
+              asyncScriptOnLoad={()=> {setIsLoadingCaptcha(false);}}
+              onChange={(value) => setCaptchaValue(value)}
             />
-          </Suspense>
           <button
-            disabled={isSubmitting} 
+            disabled={isSubmitting || !captchaValue} 
             type="submit"
             onClick={handleSubmit}
             className="hover:opacity-75 transition-opacity duration-500 inline-flex justify-center items-center px-6 py-4 font-semibold text-neutral-300/80 bg-blue-500/75 rounded-3xl sm:w-1/2 sm:mx-auto sm:min-w-max ">
-            {isSubmitting ? (<LoadingSpin text="Sending..."/>) :
-            "Send me your message" }
+            {isSubmitting ? (<LoadingSpin text="Sending..."/>) : 
+              !captchaValue ? "Solve The Captcha 🥱" : "Send me your message"
+            }
           </button>
           
         </form>
