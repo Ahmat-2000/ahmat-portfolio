@@ -44,7 +44,7 @@ function Contact() {
   };
 
   return (
-    <section className="scroll-mt-20 p-4 mt-18" id="contact">
+    <section className="scroll-mt-10 p-4 mt-10" id="contact">
       <div className="my-5">
         <h2 className="title-blue text-3xl font-black mb-8 p-1 sm:text-5xl">Contact Me</h2>
         <p className="md:w-[70%] sm:text-lg">If you have any questions or concerns, please do not hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
