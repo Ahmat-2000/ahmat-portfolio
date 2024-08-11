@@ -87,23 +87,28 @@ function Contact() {
             {errors.message && <span className="text-red-500 font-semibold px-2">{errors.message?.message}</span>}
           </div>
           
-          {isLoadingCaptcha && <LoadingCaptcha /> }
-            <ReCAPTCHA 
-              ref={recaptchaRef}
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              asyncScriptOnLoad={()=> {setIsLoadingCaptcha(false);}}
-              onChange={(value) => setCaptchaValue(value)}
-            />
+            <div className="overflow-hidden">
+              {isLoadingCaptcha && <LoadingCaptcha /> }
+              <ReCAPTCHA 
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                asyncScriptOnLoad={()=> {setIsLoadingCaptcha(false);}}
+                onChange={(value) => setCaptchaValue(value)}
+              />
+            </div>
           <button
             disabled={isSubmitting || !captchaValue} 
             type="submit"
             onClick={handleSubmit}
             className="hover:opacity-75 transition-opacity duration-500 inline-flex justify-center items-center px-6 py-4 font-semibold text-neutral-300/80 bg-blue-500/75 rounded-3xl sm:w-1/2 sm:mx-auto sm:min-w-max ">
             {isSubmitting ? (<LoadingSpin text="Sending..."/>) : 
-              !captchaValue ? "Solve The Captcha 🥱" : "Send me your message"
-            }
+              !captchaValue ? 
+              <>
+                Solve The Captcha <span className="ml-2 text-xl">🥱</span>
+              </>
+              : "Send me your message"
+            } 
           </button>
-          
         </form>
         <div className="">
           <address className="grid gap-3 my-5 text-bold not-italic md:text-xl sm:text-lg">

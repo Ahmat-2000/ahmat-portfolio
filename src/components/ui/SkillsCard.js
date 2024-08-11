@@ -1,4 +1,4 @@
-'use client'
+
 import { skillsData } from "@/lib/resumeData";
 import { skillsImage } from "@/lib/skillsImage";
 import Image from "next/image";
