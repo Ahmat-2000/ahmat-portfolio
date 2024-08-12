@@ -15,8 +15,8 @@ export const links = [
         text: "Resume"
     },
     {
-        url: "#pricing",
-        text: "Pricing",
+        url: "#services",
+        text: "Services",
     },
     {
         url: "#contact",

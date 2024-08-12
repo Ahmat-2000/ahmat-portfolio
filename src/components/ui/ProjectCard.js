@@ -13,7 +13,7 @@ function ProjectCard() {
         projectsData.map((item,id) => {
           return (
           <div key={id} className="shadow shadow-neutral-700 py-5 px-3 gap-2">
-            <Link href={item.url}>
+            <Link href={item.url} className="w-max block rounded-full animate-pulse">
               <Icon>
                 <FaExternalLinkAlt size={15} fill="black" />
               </Icon>

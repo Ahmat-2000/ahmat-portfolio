@@ -1,7 +1,7 @@
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Header from "@/components/Header";
-import Pricing from "@/components/Pricing";
+import Services from "@/components/Services";
 import Resume from "@/components/Resume";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <Features />
       <Resume />
-      <Pricing />
+      <Services />
       <Contact />
     </>
   );
