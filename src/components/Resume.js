@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import EducationCard from './ui/EducationCard';
 import LoadingSkills from './ui/LoadingSkills';
-import Experience from './ui/ Experience';
+import Experience from './ui/Experience';
 
 const LazySkillsCard = lazy(() => import('./ui/SkillsCard'));
 

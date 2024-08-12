@@ -171,7 +171,7 @@ export const projectsData = [
 
 export const experiencesData = [
     {
-        title: "Web development intern - React (two-month internship)",
+        title: "Web development intern",
         company: "Confledis - Paris",
         date : "June 2023 - August 2023",
         technologies : "React, AWS AppSync, AWS DynamoDB",
