@@ -21,7 +21,7 @@ function EducationCard() {
               </div>
               <div className="w-full max-w-md grid gap-1 font-semibold">
                 <h3 className="title-green text-sm text-center">{item.year}</h3>
-                <p className="text-sm font-bold">{item.degree}</p>
+                <p className="text-xs sm:text-sm font-bold">{item.degree}</p>
                 <p className="text-xs text-pink-500">{item.university}</p>
               </div>
             </div>

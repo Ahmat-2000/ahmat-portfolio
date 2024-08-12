@@ -47,7 +47,7 @@ function Contact() {
     <section className="scroll-mt-10 p-4 mt-10" id="contact">
       <div className="my-5">
         <h2 className="title-blue text-3xl font-black mb-8 p-1 sm:text-5xl">Contact Me</h2>
-        <p className="md:w-[70%] sm:text-lg">If you have any questions or concerns, please do not hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
+        <p className="md:w-[70%] text-sm sm:text-base">If you have any questions or concerns, please do not hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
       </div>
       <div className="md:flex md:gap-10 md:justify-between gap-5 grid">
         <form className="grid gap-5 shadow-md shadow-gray-500 p-2 md:w-full max-w-2xl" onSubmit={handleSubmit(onSubmit)}>
@@ -75,7 +75,7 @@ function Contact() {
             error={errors?.email}
           />
           <div className="grid gap-2">
-            <label htmlFor="message">Your Message <span className="text-red-500 font-semibold">*</span></label>
+            <label htmlFor="message" className="text-sm sm:text-base">Your Message <span className="text-red-500 font-semibold">*</span></label>
             <textarea
               id="message"
               {...register("message",{required:"Message is required.", minLength: {
@@ -111,7 +111,7 @@ function Contact() {
           </button>
         </form>
         <div className="">
-          <address className="grid gap-3 my-5 text-bold not-italic md:text-xl sm:text-lg">
+          <address className="grid gap-3 my-5 text-bold not-italic text-sm sm:text-base md:text-xl">
             <IconContext.Provider value={{size:'25'}}>
               <div className="flex gap-3 items-center">
                 <Icon><MdAlternateEmail fill="black"/></Icon>

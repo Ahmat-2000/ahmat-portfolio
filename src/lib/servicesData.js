@@ -5,14 +5,14 @@ export const servicesData = [
     stack: [
       "Install Linux (Ubuntu, Debian)",
       "Install Windows (10, 11)",
-      "Install and Configure Virtual Machines",
-      "Install Applications and Services",
+      "Install and Configure VM",
+      "Install Apps and Services",
       "Create a Bootable USB Drive"
     ],
-    price: "60 €"
+    price: "60€ per service"
   },
   {
-    title: "Website and Mobile Application Development Services",
+    title: "Website and Mobile Apps Development Services",
     description: "Elevate your online presence with my comprehensive development services. Whether you need a simple portfolio, a landing page to capture leads, or a dynamic agency site, I provide tailored web solutions. Additionally, I specialize in creating high-quality mobile applications using React Native to ensure a seamless user experience across devices.",
     stack: [
       "Static Website Creation",
@@ -27,7 +27,7 @@ export const servicesData = [
     price: "Contact me"
   },
   {
-    title: "Educational Services",
+    title: "Private lessons",
     description: "Unlock your potential and improve your skills with personalized educational services tailored to your needs. Whether you are a beginner or looking to perfect your skills, I offer comprehensive academic support in various subjects.",
     stack: [
       "Algorithms and Data Structures",
@@ -38,6 +38,6 @@ export const servicesData = [
       "Cybersecurity",
       "Mathematics",
     ],
-    price: "20 € per hour to 50 €"
+    price: "20€ to 50€ per hour"
   }
 ]

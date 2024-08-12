@@ -1,7 +1,7 @@
 function InputUI ({id,type,labelText,error,register}) {
   return (
   <div className="grid gap-2">
-    <label htmlFor={id}>{labelText} <span className="text-red-500 font-semibold">*</span> </label>
+    <label htmlFor={id} className="text-sm sm:text-base">{labelText} <span className="text-red-500 font-semibold">*</span> </label>
     <input
       type={type}
       id={id}
