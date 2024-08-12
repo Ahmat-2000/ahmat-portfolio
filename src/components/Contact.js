@@ -127,7 +127,7 @@ function Contact() {
               </div>
             </IconContext.Provider>
           </address>
-
+            
           <SocialMediaLinks size="25"/>
         </div>
       </div>

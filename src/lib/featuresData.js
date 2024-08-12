@@ -18,6 +18,6 @@ export const featuresData = [
     {
         title: "A Dedicated Tutor",
         body: `
-            I possess a strong passion for teaching and have experience instructing students in math, programming, algorithms, and networking. I specialize in helping those who are struggling academically, as well as high school students seeking to enhance their understanding of these subjects. Although teaching is an aside job I pursue alongside my studies, I am dedicated to fostering a supportive and engaging learning environment, breaking down complex concepts into manageable segments. While I may not be a professional educator, my skills and enthusiasm for these subjects enable me to effectively guide my students toward academic success.`
+            I possess a strong passion for teaching and have experience instructing students in mathematics, programming, algorithms, and networking. I specialize in helping those who are struggling academically, as well as high school students seeking to enhance their understanding of these subjects. Although teaching is an aside job I pursue alongside my studies, I am dedicated to fostering a supportive and engaging learning environment, breaking down complex concepts into manageable segments. While I may not be a professional educator, my skills and enthusiasm for these subjects enable me to effectively guide my students toward academic success.`
     },
 ]
