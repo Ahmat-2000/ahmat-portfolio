@@ -15,28 +15,28 @@ function Header() {
   })
 
   return (
-    <header className="flex flex-col gap-4 scroll-mt-24 md:gap-10 px-4 md:px-5 md:py-28 md:flex-row lg:justify-center lg:items-center" id="home">
-      <Image className="md:hidden rounded-full ml-auto w-[330px]" src={userData.image}  alt={userData.name} />
-      <div className="flex flex-col gap-4 md:w-1/2 md:gap-16 md:mb-5 md:ml-0 sm:w-4/5" >
+    <header className="flex flex-col scroll-mt-24 md:gap-10 lg:gap-20 px-4 md:pl-2 md:py-20 md:flex-row lg:justify-center lg:items-center" id="home">
+      <Image className="md:hidden mx-auto rounded-full ml-auto w-[270px] sm:w-[320px] sm:mr-0" src={userData.image}  alt={userData.name} />
+      <div className="flex flex-col gap-4 md:w-1/2 min-[670px]:w-4/5 md:gap-10 md:mb-5  " >
       {/* start of heading */}
-        <h1 className="font-semibold text-neutral-300 text-4xl sm:text-4xl min-[505px]:text-5xl lg:text-6xl ">Hello,<br className="mb-1 "/> This is
+        <h1 className="font-semibold text-neutral-300 text-3xl min-[505px]:text-4xl lg:text-5xl ">Hello,<br className="mb-1 "/> This is
           <span className="text-green-600 ">{` ${userData.name}`}</span>
           <br className="sm:mb-2"/>
-          <span className="text-3xl lg:ml-2 p-1 ">
+          <span className="text-2xl sm:text-3xl">
             <span> I’m a </span>
-            <span className="lg:text-4xl">
+            <span className="">
               <b className="text-pink-600">{text}</b>
             </span>
           </span>
         </h1>
 
-        <p className="text-neutral-300 text-md sm:text-xl max-w-md lg:text-2xl">{userData.descriptionText}</p>
+        <p className="text-neutral-300 text-sm sm:text-base md:text-lg">{userData.descriptionText}</p>
         {/* end of heading */}
 
         {/* start of social media  */}
-        <SocialMediaLinks size="35"/>
+        <SocialMediaLinks size="25"/>
         {/* end of social media  */}
-        <div className="flex flex-col gap-5 sm:flex-row ">
+        <div className="flex flex-col gap-2 sm:flex-row ">
           <HeroBtn url="#contact" text="CONTACT ME">
             <IoMdContact size={20}/>
           </HeroBtn>

@@ -63,7 +63,7 @@ export const userData = {
     name: "AHMAT",
     image: profileImage, // you need to put your image in /src/images with the name profile.png
     profession: ['Freelancer', 'Developer', 'Pentester'],
-    descriptionText :"I am a self-taught programmer and passionate about cybersecurity.",
+    descriptionText :"I am a self-taught programmer passionate about cybersecurity. Currently seeking a 6-month internship opportunity to further develop my skills and contribute to a dynamic team.",
     phoneNumber : "+33 7 51 01 85 42",
     email : "ahmatmhtlouky@gmail.com",
     adress : "2 Bd Maréchal Juin, 14000 Caen, France",
