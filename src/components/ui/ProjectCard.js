@@ -5,22 +5,22 @@ import Icon from "./Icon";
 
 function ProjectCard() {
   return (
-    <div className="shadow-md shadow-neutral-700 py-10 px-2">
-      <h2 className="shadow-md shadow-neutral-700 mb-10 title-green text-2xl text-center font-black mx-2 p-4 sm:text-3xl">Side Projects</h2>
+    <div className="my-10">
+      <h2 className="shadow-md shadow-neutral-600/90 mb-10 title-green text-2xl text-center font-black py-4 sm:text-3xl rounded-md">Side Projects</h2>
 
       <div className="grid gap-8 md:grid-cols-2">
         {
         projectsData.map((item,id) => {
           return (
-          <div key={id} className="shadow shadow-neutral-700 py-5 px-3 gap-2">
+          <div key={id} className="shadow-md shadow-neutral-600/90 py-5 px-3 gap-2 rounded-2xl hover:scale-100 hover:shadow-sky-800 hover: md:scale-95 transition-transform duration-1000">
             <Link href={item.url} className="w-max block rounded-full animate-pulse">
               <Icon>
                 <FaExternalLinkAlt size={15} fill="black" />
               </Icon>
             </Link>
-            <h3 className="shadow-md shadow-neutral-700 mt-5 mb-10 title-green text-sm text-center font-black p-2 sm:text-xl">{item.title}</h3>
+            <h3 className="shadow-md shadow-inherit mt-5 mb-10 title-green text-sm text-center font-black p-2 sm:text-xl rounded-md">{item.title}</h3>
             <p className="text-sm sm:text-base">{item.desciption}</p>
-            <p className="mt-4 text-sm font-semibold text-pink-500 sm:text-base">Technologies: {item.technologies}</p>
+            <p className="mt-5 text-sm text-fuchsia-600 sm:text-base">Technologies: {item.technologies}</p>
           </div>)
         })
         }

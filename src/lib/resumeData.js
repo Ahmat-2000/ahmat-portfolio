@@ -165,7 +165,7 @@ export const projectsData = [
     {
         title: "Hanabi Game Development",
         url : "https://github.com/Ahmat-2000/jeu-de-hanabi",
-        technologies : "Java, MVC, Apache Ant, ",
+        technologies : "Java, MVC, Apache Ant",
         desciption : "I have developed a game based on Hanabi, a cooperative card game where players work together to create a beautiful fireworks display. This project consists of two versions: a console version and a graphical version, both of which incorporate artificial intelligence (AI) elements to enhance gameplay."
     },
 ]
