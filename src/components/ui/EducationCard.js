@@ -22,7 +22,7 @@ function EducationCard() {
               <div className="w-full max-w-md grid gap-1">
                 <h3 className="title-green text-sm text-center rounded-md">{item.year}</h3>
                 <p className="mb-1 text-xs sm:text-sm">{item.degree}</p>
-                <p className="text-xs text-indigo-400 uppercase tracking-widest">{item.university}</p>
+                <p className="text-xs text-indigo-400 sm:uppercase sm:tracking-widest">{item.university}</p>
               </div>
             </div>
           ))}
