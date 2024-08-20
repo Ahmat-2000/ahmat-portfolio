@@ -20,7 +20,7 @@ function ProjectCard() {
             </Link>
             <h3 className="shadow-md shadow-inherit mt-5 mb-10 title-green text-sm text-center font-black p-2 sm:text-xl rounded-md">{item.title}</h3>
             <p className="text-sm sm:text-base">{item.desciption}</p>
-            <p className="mt-5 text-sm text-fuchsia-600 sm:text-base">Technologies: {item.technologies}</p>
+            <p className="mt-5 text-sm text-indigo-400 sm:text-base">Technologies: {item.technologies}</p>
           </div>)
         })
         }
