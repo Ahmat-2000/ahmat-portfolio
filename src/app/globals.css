@@ -14,14 +14,18 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style-type: none;
-  color: #c0c0c0;
+  color: rgb(243, 243, 243);
   font-family: fantasy Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: var(--dark-color) ;
+  /* background-color: var(--dark-color) ; */
+  background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
 }
 
+nav {
+  background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+}
 
 @layer utilities {
   .text-balance {
