@@ -44,19 +44,19 @@ function Contact() {
   };
 
   return (
-    <section className="scroll-mt-10 p-4 mt-10" id="contact">
+    <section className="p-4 mt-10 scroll-mt-10" id="contact">
       <div className="my-5">
-        <h2 className="title-blue text-3xl font-black mb-8 p-1 sm:text-5xl">Contact Me</h2>
+        <h2 className="p-1 mb-8 text-3xl font-black title-blue sm:text-5xl">Contact Me</h2>
         <p className="md:w-[70%] text-sm sm:text-base">If you have any questions or concerns, please do not hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
       </div>
-      <div className="md:flex md:gap-10 md:justify-between gap-5 grid">
-        <form className="grid gap-5 shadow-md shadow-gray-500 p-2 md:w-full max-w-2xl" onSubmit={handleSubmit(onSubmit)}>
+      <div className="grid gap-5 md:flex md:gap-10 md:justify-between">
+        <form className="grid max-w-2xl gap-5 p-2 shadow-md shadow-gray-500 md:w-full" onSubmit={handleSubmit(onSubmit)}>
 
-          {feedback && feedback?.status > 200 && <div className="shadow-md animate-pulse shadow-red-900 text-red-700 px-4 py-3 rounded " role="alert">
+          {feedback && feedback?.status > 200 && <div className="px-4 py-3 text-red-700 rounded shadow-md animate-pulse shadow-red-900 " role="alert">
             <strong className="font-bold text-inherit">{feedback?.message}</strong>
           </div>}
 
-          {feedback && feedback?.status === 200 && <div className="shadow-md animate-pulse shadow-green-900 text-green-700 px-4 py-3 rounded" role="alert">
+          {feedback && feedback?.status === 200 && <div className="px-4 py-3 text-green-700 rounded shadow-md animate-pulse shadow-green-900" role="alert">
             <strong className="font-bold text-inherit">{feedback?.message}</strong>
           </div>}
 
@@ -75,7 +75,7 @@ function Contact() {
             error={errors?.email}
           />
           <div className="grid gap-2">
-            <label htmlFor="message" className="text-sm sm:text-base">Your Message <span className="text-red-500 font-semibold">*</span></label>
+            <label htmlFor="message" className="text-sm sm:text-base">Your Message <span className="font-semibold text-red-500">*</span></label>
             <textarea
               id="message"
               {...register("message",{required:"Message is required.", minLength: {
@@ -84,7 +84,7 @@ function Contact() {
               }})}
               className="w-full bg-inherit rounded-lg border-stone-600/100 border shadow-sm shadow-stone-600/90 hover:shadow-stone-400/100 transition-shadow duration-500 focus:outline-none focus:shadow-stone-400/100 min-h-[200px] p-4"
             />
-            {errors.message && <span className="text-red-500 font-semibold px-2">{errors.message?.message}</span>}
+            {errors.message && <span className="px-2 font-semibold text-red-500">{errors.message?.message}</span>}
           </div>
           
             <div className="overflow-hidden">
@@ -100,7 +100,7 @@ function Contact() {
             disabled={isSubmitting || !captchaValue} 
             type="submit"
             onClick={handleSubmit}
-            className="hover:opacity-75 transition-opacity duration-500 inline-flex justify-center items-center px-6 py-4 font-semibold text-neutral-300/80 bg-blue-500/75 rounded-3xl sm:w-1/2 sm:mx-auto sm:min-w-max ">
+            className="inline-flex items-center justify-center px-6 py-4 font-semibold transition-opacity duration-500 hover:opacity-75 text-neutral-300/80 bg-blue-500/75 rounded-3xl sm:w-1/2 sm:mx-auto sm:min-w-max ">
             {isSubmitting ? (<LoadingSpin text="Sending..."/>) : 
               !captchaValue ? 
               <>
@@ -111,17 +111,17 @@ function Contact() {
           </button>
         </form>
         <div className="">
-          <address className="grid gap-3 my-5 text-bold not-italic text-sm sm:text-base md:text-xl">
+          <address className="grid gap-3 my-5 text-sm not-italic text-bold sm:text-base md:text-xl">
             <IconContext.Provider value={{size:'25'}}>
-              <div className="flex gap-3 items-center">
+              <div className="flex items-center gap-3">
                 <Icon><MdAlternateEmail fill="black"/></Icon>
                 <span className="">{userData.email}</span>
               </div>
-              <div className="flex gap-3 items-center">
+              <div className="flex items-center gap-3">
                 <Icon><MdOutlinePhoneInTalk fill="black"/></Icon>
                 <span className="">{userData.phoneNumber}</span>
               </div>
-              <div className="flex gap-3 items-center">
+              <div className="flex items-center gap-3">
                 <Icon><FaLocationDot fill="black"/></Icon>
                 <span className="">{userData.adress}</span>
               </div>
