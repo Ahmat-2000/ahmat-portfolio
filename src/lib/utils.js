@@ -1,5 +1,6 @@
 import { FaGithub, FaYoutube , FaTwitter, FaLinkedin, FaFacebook} from "react-icons/fa";
-import profileImage from "/src/images/profile.png";
+import profileImage from "@/images/profile.png";
+import logo from "@/images/logo.png";
 // nav link
 export const links = [
     {
@@ -61,12 +62,13 @@ export const media = [
 // update this variable with your data
 export const userData = {
     name: "AHMAT",
+    logo: logo,
     image: profileImage, // you need to put your image in /src/images with the name profile.png
     profession: ['Freelancer', 'Developer', 'Pentester'],
     descriptionText :"As a dedicated, self-taught programmer currently pursuing my studies, I am passionate about cybersecurity and eager to apply my skills in a professional setting. I am looking for a 6-month internship opportunity where I can further develop my expertise and contribute significantly to a dynamic team.",
     phoneNumber : "+33 7 51 01 85 42",
     email : "ahmatmhtlouky@gmail.com",
-    adress : "2 Bd Maréchal Juin, 14000 Caen, France",
+    adress : "14000 Caen, France",
 }
 // your professions
 export const wordToType = ['Freelancer', 'Developer', 'Pentester'];
