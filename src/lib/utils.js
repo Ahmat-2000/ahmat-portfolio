@@ -65,7 +65,8 @@ export const userData = {
     logo: logo,
     image: profileImage, // you need to put your image in /src/images with the name profile.png
     profession: ['Freelancer', 'Developer', 'Pentester'],
-    descriptionText :"As a dedicated, self-taught programmer currently pursuing my studies, I am passionate about cybersecurity and eager to apply my skills in a professional setting. I am looking for a 6-month internship opportunity where I can further develop my expertise and contribute significantly to a dynamic team.",
+    // descriptionText :"As a dedicated, self-taught programmer currently pursuing my studies, I am passionate about cybersecurity and eager to apply my skills in a professional setting. I am looking for a 6-month internship opportunity where I can further develop my expertise and contribute significantly to a dynamic team.",
+    descriptionText: "I am a master's student in computer science, specializing in cybersecurity, pentesting, and application development. With a strong foundation in these areas, I am passionate about designing secure solutions and solving complex challenges through code. I am driven to apply my advanced knowledge and hands-on skills to real-world problems, continuously expanding my expertise in a fast-evolving tech landscape. My goal is to make impactful contributions to innovative projects that prioritize security and efficiency.",
     phoneNumber : "+33 7 51 01 85 42",
     email : "ahmatmhtlouky@gmail.com",
     adress : "14000 Caen, France",
@@ -74,4 +75,3 @@ export const userData = {
 export const wordToType = ['Freelancer', 'Developer', 'Pentester'];
 
 // description
-export const descriptionText = "I am a self-taught programmer and passionate about cybersecurity.";
