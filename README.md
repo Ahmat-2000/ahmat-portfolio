@@ -19,7 +19,7 @@ This repository provides a customizable portfolio template for showcasing your s
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/portfolio-project.git
+   git clone git@github.com:Ahmat-2000/ahmat-portfolio.git
    cd portfolio-project
    ```
 
