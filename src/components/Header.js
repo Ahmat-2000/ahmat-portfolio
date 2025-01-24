@@ -4,9 +4,14 @@ import Image from 'next/image';
 import { useTypewriter} from 'react-simple-typewriter';
 import { IoMdContact, IoMdDownload } from "react-icons/io";
 
-import { userData } from '@/lib/utils';
+import { userData } from '@/lib/user-english-data';
 import SocialMediaLinks from '@/components/ui/SocialMediaLink';
 import HeroBtn from './ui/HeroBtn';
+
+// import React, { lazy, Suspense } from 'react'
+// import LoadingSkills from './ui/LoadingSkills';
+
+// const LazySkillsCard = lazy(() => import('./ui/SkillsCard'));
 
 function Header() {
   const [text] = useTypewriter({
@@ -54,6 +59,9 @@ function Header() {
           alt={userData.name}
         />
       </div>
+      {/* <Suspense fallback={<LoadingSkills />} >
+        <LazySkillsCard />
+      </Suspense> */}
     </header>);
 }
 

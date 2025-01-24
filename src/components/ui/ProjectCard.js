@@ -3,16 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Icon from "./Icon";
-import { userData } from "@/lib/utils";
+import { userData } from "@/lib/user-english-data";
 
 function ProjectCard() {
   return (
-    <div className="my-10">
+    <div className="p-4 mt-10 mb-20 scroll-mt-20" id="projects">
       <h2 className="py-4 mb-10 text-2xl font-black text-center rounded-md shadow-md shadow-neutral-600/90 title-green sm:text-3xl">Side Projects</h2>
 
       <div className="grid gap-8 md:grid-cols-2">
         {projectsData.map((item, id) => (
-          <div key={id} className="gap-2 px-3 py-5 shadow-md shadow-neutral-600/90 rounded-2xl hover:shadow-sky-800">
+          <div key={id} className="flex flex-col gap-2 p-3 shadow-md shadow-neutral-600/90 rounded-2xl hover:shadow-sky-800">
             
             {/* External Link */}
             <Link href={item.url} target="_blank" className="block transition-transform rounded-full w-max animate-pulse hover:rotate-12">
@@ -22,7 +22,7 @@ function ProjectCard() {
             </Link>
             
             {/* Title */}
-            <h3 className="p-2 mt-5 mb-5 text-lg font-bold text-center rounded-md shadow-md title-green sm:text-xl ">{item.title}</h3>
+            <h3 className="p-2 mt-5 mb-5 text-lg font-bold text-center rounded-md shadow-md shadow-gray-600 title-green sm:text-xl ">{item.title}</h3>
 
             {/* Project Image */}
             <Link href={item.url} target="_blank" className="cursor-pointer">

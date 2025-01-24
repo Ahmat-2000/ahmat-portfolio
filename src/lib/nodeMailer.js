@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { userData } from './utils';
+import { userData } from './user-english-data';
 
 export const transport = nodemailer.createTransport({
   service: 'gmail',

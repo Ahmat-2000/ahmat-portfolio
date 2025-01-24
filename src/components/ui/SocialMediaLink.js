@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { media } from "@/lib/utils";
+import { media } from "@/lib/user-english-data";
 import { IconContext } from "react-icons";
 import Icon from "./Icon";
 

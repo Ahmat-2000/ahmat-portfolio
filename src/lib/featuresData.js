@@ -15,8 +15,8 @@ export const featuresData = [
         title: "Full-Stack Development",
         body: `With programming experience in Python, PHP, Java, JavaScript, and C, I specialize in frameworks like React, React Native, Django, and Next.js. I am dedicated to creating innovative and user-friendly web and mobile applications.`,
     },
-    {
-        title: "Dedicated Tutor",
-        body: `As a passionate tutor, I help students in mathematics, programming, algorithms, and networking. I focus on supporting learners who struggle academically and strive to create an engaging environment that simplifies complex concepts for better understanding.`,
-    },
+    // {
+    //     title: "Dedicated Tutor",
+    //     body: `As a passionate tutor, I help students in mathematics, programming, algorithms, and networking. I focus on supporting learners who struggle academically and strive to create an engaging environment that simplifies complex concepts for better understanding.`,
+    // },
 ]

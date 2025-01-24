@@ -1,7 +1,7 @@
 import { experiencesData } from "@/lib/resumeData";
 function  Experience() {
   return (
-    <div className="my-5">
+    <div className="p-4 mt-10 mb-20 scroll-mt-20" id="experiences">
       <h2 className="p-4 mb-10 text-2xl font-black text-center rounded-md shadow-md shadow-gray-600/90 title-green sm:text-3xl">Experiences</h2>
 
       <div className="grid gap-5 md:flex">

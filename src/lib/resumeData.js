@@ -10,12 +10,12 @@ import dAppImage from '@/images/projects/dApp.png';
 export const degreesData = [
     {
         year : "2024 - present",
-        degree : "Second year of a Master's degree in Cybersecurity",
+        degree : "Second year of a Master's degree in Computer Science",
         university : "University of Caen Normandy",
     },
     {
         year : "2023 - 2024",
-        degree : "First year of a Master's degree  in Cybersecurity",
+        degree : "First year of a Master's degree  in Computer Science",
         university : "University of Caen Normandy",
     },
     {
@@ -43,6 +43,10 @@ export const skillsData = [
     'MongoDB',
     'MySQL',
     'PostgreSQL',
+    "Node JS",
+    "Typescript"
+
+
 
     // Choose your skills from below. Make sure it's in the same format and spelled correctly.
     // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
@@ -138,9 +142,9 @@ export const experiencesData = [
         title: "Web development intern",
         company: "Confledis - Paris - France",
         date : "June 2023 - August 2023",
-        technologies : "React, AWS AppSync, AWS DynamoDB",
+        technologies : "React, AWS AppSync, AWS DynamoDB, Jira, Git",
         desciption : `
-            During a two-month internship at Confledis in Paris, I contributed to the development of a tourism website. This role allowed me to enhance my skills in React for creating dynamic user interfaces. Additionally, I gained practical experience with AWS services such as AppSync for data management and real-time communication, and DynamoDB for efficient storage solutions. Furthermore, I learned to utilize Jira for project management, thereby strengthening my collaboration and organizational skills. This experience significantly enriched my technical expertise and deepened my understanding of web development in a professional context.
+            During my internship at Confledis in Paris, I contributed to the development of a tourist website. In this role, I improved my skills in using React to create dynamic user interfaces. I also gained hands-on experience with AWS services like AppSync for data management and real-time communication, and DynamoDB for storage solutions. I learned how to use Jira for project management, which helped me improve my teamwork and organizational skills. This experience greatly improved my technical knowledge and understanding of web development in a professional setting.
         `,
     },
 
@@ -148,12 +152,9 @@ export const experiencesData = [
         title: "Computer Tutoring - Fixed-Term Contract",
         company: "University of Caen - 14000 - France",
         date : "October 2023 - May 2024",
-        technologies : "C, Java, MySql, Algorithms and Mathematics",
+        technologies : "C, Java, MySql, Algorithms and Maths",
         desciption : `
-            As a computer science tutor at the University of Caen, I assisted second-year undergraduate students twice a week. My role involved guiding them in mastering the fundamental concepts of programming, algorithms, databases, and mathematics. Through interactive sessions and personalized guidance, I aimed to enhance their comprehension and bolster their confidence.
-
-            This experience also afforded me the opportunity to refine my teaching and communication skills while fostering a collaborative learning environment.
-
+            I worked as a computer science professor at the University of Caen, where I assisted second year students twice a week. My role was to help them better understand programming, algorithms, databases and mathematics. I used interactive sessions and provided personalized support to build their confidence and knowledge. This experience also allowed me to improve my teaching and communication skills.
         `,
     },
 ]
@@ -164,15 +165,15 @@ export const projectsData = [
         title: "CTFs on TryHackMe",
         url: "https://tryhackme.com/p/Ahmat",
         image: ctfImage,
-        technologies: "Kali Linux, Nmap, OpenVas, Metasploit, Burp Suite, Gobuster, Hydra, SQLMap...",
-        description: "Highlighting hands-on experience in CTF challenges on TryHackMe, covering ethical hacking and penetration testing. These exercises covered a wide range of real-world cybersecurity scenarios, enhancing my ability to identify vulnerabilities",
+        technologies: "Kali Linux, Nmap, Metasploit, Burp Suite, Gobuster, Hydra, SQLMap...",
+        description: "I gained hands-on experience with Capture The Flag (CTF) challenges on platforms like TryHackMe and Root-Me. These challenges focused on ethical hacking and penetration testing, allowing me to explore various real-world cybersecurity scenarios. Through these exercises, I improved my skills in identifying vulnerabilities and understanding how to protect systems effectively.",
     },
     {
         title: "Simulator of DDOS Attacks",
         url: "https://github.com/Ahmat-2000/DDOS-attack-with-docker",
         image: ddosImage,
         technologies: "Docker, Hping3, SlowLoris, Nginx, Apache",
-        description: "A comprehensive tool designed to simulate and analyze DDoS attacks on web servers. It serves as an educational resource to understand server vulnerabilities and defense mechanisms.",
+        description: "A comprehensive tool designed to simulate and analyze DDoS attacks on web servers. It serves as an educational resource for understanding web server vulnerabilities and defense mechanisms.",
     },
     {
         title: "Blockchain Web Application",

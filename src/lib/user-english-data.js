@@ -8,16 +8,20 @@ export const links = [
         text: "Home"
     },
     {
-        url: "#features",
-        text: "Features"
+        url: "#skills",
+        text: "Skills",
     },
     {
-        url: "#resume",
-        text: "Resume"
+        url: "#experiences",
+        text: "Experiences"
     },
     {
-        url: "#services",
-        text: "Services",
+        url: "#projects",
+        text: "Projects"
+    },
+    {
+        url: "#education",
+        text: "Education"
     },
     {
         url: "#contact",
@@ -64,8 +68,8 @@ export const userData = {
     name: "AHMAT",
     logo: logo,
     image: profileImage, // you need to put your image in /src/images with the name profile.png
-    profession: ['Pentester','white hat','Freelancer', 'Developer'],
-    descriptionText: `Welcome to my portfolio! I am a dedicated Computer Science student specializing in cybersecurity, with a focus on penetration testing, offensive security, and red team operations. My strong foundation in programming, Linux systems, networking, and cryptography enables me to address complex security challenges effectively.`,
+    profession: ['Pentester', 'Developer','Freelancer'],
+    descriptionText: `Welcome to my portfolio! a dedicated Computer Science student with a strong focus on penetration testing and software development. My dual expertise allows me to identify vulnerabilities while creating robust applications. I’m passionate about building secure systems and tackling real-world cybersecurity challenges.`,
     phoneNumber : "+33 7 51 01 85 42",
     email : "ahmatmhtlouky@gmail.com",
     adress : "14000 Caen, France",

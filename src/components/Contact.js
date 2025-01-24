@@ -6,7 +6,7 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IconContext } from "react-icons";
 
-import { userData } from "@/lib/utils";
+import { userData } from "@/lib/user-english-data";
 import Icon from "./ui/Icon";
 import SocialMediaLinks from "./ui/SocialMediaLink";
 import { postApiCall } from "@/lib/apiCallFonctions";

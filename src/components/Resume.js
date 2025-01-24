@@ -8,8 +8,7 @@ const LazySkillsCard = lazy(() => import('./ui/SkillsCard'));
 
 function Resume() {
   return (
-    <section className="scroll-mt-20 p-4 mt-10" id="resume">
-      <h2 className="title-blue text-3xl font-black mb-8 p-1 sm:text-5xl">Resume</h2>
+    <section className="p-4 mt-10 scroll-mt-20" id="resume">
       <Experience />
       <ProjectCard />
       <Suspense fallback={<LoadingSkills />} >
